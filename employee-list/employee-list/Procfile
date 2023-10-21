@@ -1,1 +1,1 @@
-web: java -jar employee-list/employee-list/build/libs/employee-list-0.0.1-SNAPSHOT.jar
+web: java -jar build/libs/employee-list-0.0.1-SNAPSHOT.jar
