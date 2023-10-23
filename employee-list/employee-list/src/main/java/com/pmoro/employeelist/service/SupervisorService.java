@@ -8,7 +8,9 @@ import java.util.Optional;
 public interface SupervisorService {
     MaintenanceSupervisor createSupervisor(MaintenanceSupervisor supervisorToCreate);
 
-    Optional<MaintenanceSupervisor> findSupervisor(Integer id);
+    MaintenanceSupervisor findSupervisor(Integer id);
 
     List<MaintenanceSupervisor> listSupervisor();
+
+    MaintenanceSupervisor deleteSupervisor(Integer id);
 }
