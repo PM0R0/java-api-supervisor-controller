@@ -1,9 +1,6 @@
 package com.pmoro.employeelist.domain.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity(name = "tb_tasks")
 public class Task {
@@ -11,6 +8,17 @@ public class Task {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
+
+
+    private Boolean done = false;
+
+    public Boolean getChecked() {
+        return done;
+    }
+
+    public void setChecked(Boolean checked) {
+        this.done = checked;
+    }
 
     public Integer getId() {
         return id;

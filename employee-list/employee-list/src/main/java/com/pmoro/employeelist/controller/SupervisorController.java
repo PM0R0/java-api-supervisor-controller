@@ -50,7 +50,7 @@ public class SupervisorController {
     public ResponseEntity<MaintenanceSupervisor> deleteSupervisor(@PathVariable Integer id) {
         try {
             var supervisorToRemove = supervisorService.deleteSupervisor(id);
-            return ResponseEntity.ofNullable(supervisorToRemove);
+            return ResponseEntity.ok(supervisorToRemove);
         } catch (NoSuchElementException e){
             return null;
         }
